@@ -50,9 +50,9 @@
 //   },
 // });
 
-import SimpleApp from './src/app'
+import AppScreenNavigator from './src/app'
 import {
   AppRegistry
 } from 'react-native';
 
-AppRegistry.registerComponent('small', () => SimpleApp);
+AppRegistry.registerComponent('small', () => AppScreenNavigator);
