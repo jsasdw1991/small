@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import {Text, Image} from 'react-native'
+import {Text, Image, View} from 'react-native'
+import {TabNavigator} from "react-navigation"
+
+import HeaderSearchBar from '../component/headerSearchBar'
 
 class Home extends Component {
   constructor(props) {
@@ -8,9 +11,13 @@ class Home extends Component {
 
   render() {
     return(
-      <Text>Home</Text>
+      <View>
+        <HeaderSearchBar></HeaderSearchBar>
+      </View>
     )
   }
 }
+
+
 
 export default Home

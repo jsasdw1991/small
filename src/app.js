@@ -36,14 +36,14 @@ const RouteConfigs = {
   designer: {
     screen: Designer,
     navigationOptions: {
-      tabBarLabel: "家装‘社’团",
+      tabBarLabel: "家装社团",
       tabBarIcon: () => (<Image style={styles.icon} source={designerImg}/>)
     }
   },
   Wiki: {
     screen: Wiki,
     navigationOptions: {
-      tabBarLabel: '门窗百科',
+      tabBarLabel: '百科',
       tabBarIcon: () => (<Image style={styles.icon} source={wikiImg}/>)
     }
   },
