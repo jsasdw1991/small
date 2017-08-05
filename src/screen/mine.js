@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {Text} from 'react-native'
 
+
 class Mine extends Component {
+
   constructor(props) {
     super(props)
   }

@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {Text} from 'react-native'
 
-class Home extends Component {
+class Wiki extends Component {
+
   constructor(props) {
     super(props)
   }
 
   render() {
     return(
-      <Text>Home</Text>
+      <Text>Wiki</Text>
     )
   }
 }
 
-export default Home
+export default Wiki
