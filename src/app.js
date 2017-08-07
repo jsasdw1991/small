@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Platform, Image, StyleSheet} from 'react-native'
 import {TabNavigator, TabBarBottom} from "react-navigation"
+import './config/mock'
 
 // 五个屏
 import Home from './screen/home'

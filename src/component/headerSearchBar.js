@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {View, Button, Text, StyleSheet, Platform, Image, TextInput} from 'react-native'
+import {View, Button, Text, StyleSheet, Platform, Image, TextInput, TouchableHighlight} from 'react-native'
 
 import leftImg from '../assets/images/left.png'
 import smsImg from '../assets/images/sms.png'
@@ -13,22 +13,29 @@ class HeaderSearchBar extends Component {
     }
   }
 
+  onPressSearchBar() {
+  }
+
   render() {
     return (
       <View style={styles.headerSearchBar}>
         <View style={styles.left}>
           <Image style={styles.backImg} source={leftImg} />
         </View>
+
         <View style={styles.center}>
-          <TextInput
-            style={styles.searchInput}
-            onChangeText={(keyword) => this.setState({keyword})}
-            value={this.state.keyword}
-            placeholder="关键字"
-            underlineColorAndroid="transparent"
-          />
+          <TouchableHighlight style={styles.centerTouch} onPress={this.onPressSearchBar}>
+            <TextInput
+              style={styles.searchInput}
+              onChangeText={(keyword) => this.setState({keyword})}
+              value={this.state.keyword}
+              placeholder="关键字"
+              underlineColorAndroid="transparent"
+            />
+          </TouchableHighlight>
           <Image source={searchImg} style={styles.searchImg}></Image>
         </View>
+        
         <View style={styles.right}>
           <Image style={styles.backImg} source={smsImg} />
         </View>
@@ -70,10 +77,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
+  centerTouch: {
+    width: '90%'
+  },
   searchInput: {
     backgroundColor: '#8ae0ad',
     height: 30,
-    width: '90%',
+    width: '100%',
     padding: 0,
     paddingLeft: 30,
     paddingRight: 30,
