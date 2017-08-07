@@ -3,6 +3,7 @@ import {View, Button, Text, StyleSheet, Platform, Image, TextInput} from 'react-
 
 import leftImg from '../assets/images/left.png'
 import smsImg from '../assets/images/sms.png'
+import searchImg from '../assets/images/search.png'
 
 class HeaderSearchBar extends Component {
   constructor(props) {
@@ -26,7 +27,7 @@ class HeaderSearchBar extends Component {
             placeholder="关键字"
             underlineColorAndroid="transparent"
           />
-          
+          <Image source={searchImg} style={styles.searchImg}></Image>
         </View>
         <View style={styles.right}>
           <Image style={styles.backImg} source={smsImg} />
@@ -74,9 +75,16 @@ const styles = StyleSheet.create({
     height: 30,
     width: '90%',
     padding: 0,
-    paddingLeft: 20,
-    paddingRight: 20,
-    color: '#7A7A7A'
+    paddingLeft: 30,
+    paddingRight: 30,
+    color: '#7A7A7A',
+    fontSize: 18,
+  },
+  searchImg: {
+    width: 18,
+    height: 18,
+    position: 'absolute',
+    left: '7%'
   },
 
   right: {
